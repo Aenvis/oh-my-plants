@@ -1,4 +1,3 @@
 package com.project.models
 
-data class PlantResponse(val plant: Plant) {
-}
+data class PlantResponse(val data: List<Plant>)
