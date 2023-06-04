@@ -4,10 +4,12 @@ import com.project.models.Plant
 
 class UserPlantsRepository : IUserPlantsRepository {
 
-    var userPlants: List<Plant> = listOf()
+    var userPlants: Set<Plant> = setOf()
 
     override fun getPlantById(plantId: Int): Plant {
-        TODO("Not yet implemented")
+        val plant = userPlants.find { it.Id == plantId }
+
+        return plant!!
     }
 
     override fun getAllPlants(): List<Plant> {
